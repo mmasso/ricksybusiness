@@ -25,6 +25,9 @@
 
 package edu.elsmancs.ricksybusiness;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class RicksyBusiness {
     
     public static void main(String[] args) {
@@ -163,11 +166,13 @@ public class RicksyBusiness {
          * Para ello, crea el componente receptivo
          * y registra (añade) los componentes UfosPark
          * y CrystalDispatcher al receptivo
-     
+        */
 
         Receptivo receptivo = new Receptivo();
         receptivo.registra(packExpender);
         receptivo.registra(ufosPark);
+
+    
 
         // Implementa el metodo receptivo.dispatch()
         // para que invoque a UfosPark.dispatch()
@@ -222,7 +227,27 @@ public class RicksyBusiness {
 
          /* tu código aquí
         */
+
+        RickMenu rickMenu = new RickMenu(100, 10);
+
+        Receptivo receptivoMenu = new Receptivo();
+        receptivoMenu.registra(rickMenu);
+        CreditCard[] creditCards = { abradolph, squanchy, morty, gearHead, birdpearson };
+		for (CreditCard creditCard : creditCards) {
+            receptivoMenu.dispatch(creditCard);
+        }
+
+        // Muestra el total de packs y su precio unidad
+        System.out.println("\nPacks\n" + 
+                             "=====");
+        System.out.println(rickMenu);
+
+         //printamos creditCards//
+         for (CreditCard creditCard : creditCards) {
+            System.out.println(creditCard.toString());
+        }
         
+
     }
 
     private static void mostrarReserva(CreditCard card, CrystalExpender expender, UfosPark ufos) {

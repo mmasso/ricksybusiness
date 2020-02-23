@@ -3,7 +3,7 @@ package edu.elsmancs.ricksybusiness;
 import java.util.HashMap;
 import java.util.Map;
 
-public class UfosPark {
+public class UfosPark implements GuestDispatcher{
     private final double fee = 500.0;
     private Map<String, CreditCard> flota = new HashMap<>();
 
@@ -14,7 +14,7 @@ public class UfosPark {
         this.flota.put(ufoID, null);
     }
 
-    void dispatch(CreditCard creditCard) {
+    public void dispatch(CreditCard creditCard) {
         try {
             require(isAlgunoLibre());
             // comprueba si hay credito //

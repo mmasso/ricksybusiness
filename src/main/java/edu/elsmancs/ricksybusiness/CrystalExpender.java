@@ -1,6 +1,6 @@
 package edu.elsmancs.ricksybusiness;
 
-public class CrystalExpender {
+public class CrystalExpender implements GuestDispatcher {
 
     private int stock = 0;
     private double itemPrice = 0;
@@ -10,7 +10,7 @@ public class CrystalExpender {
         this.itemPrice = price;
 	}
 
-    void dispatch(CreditCard creditCard) {
+    public void dispatch(CreditCard creditCard) {
         try {
             // comprueba si hay credito //
             require(creditCard.credit() >= itemPrice);

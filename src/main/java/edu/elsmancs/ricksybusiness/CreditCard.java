@@ -37,6 +37,14 @@ public class CreditCard {
     }
     
 	public void pay(double fee) {
-        this.credit -= fee;
-	}
+        if (this.credit > 0.0){
+            this.credit -= fee;}
+    }
+    
+    /**
+     * @return the owner
+     */
+    public String getOwner() {
+        return owner;
+    }
 }
