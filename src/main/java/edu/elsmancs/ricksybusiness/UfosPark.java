@@ -7,7 +7,6 @@ import java.util.Map;
  * Ufos Park representa una flota de ovnis (taxis) esperando a ser despachados hacia un cliente.
  * @author Mateu Massó
  */
-
 public class UfosPark implements GuestDispatcher{
     private final double fee = 500.0;
     private Map<String, CreditCard> flota = new HashMap<>();
@@ -96,7 +95,7 @@ public class UfosPark implements GuestDispatcher{
     }
 
     /**
-     * Metodo para obtener el UFO asignada de una CreditCardNumber dada
+     * Metodo para obtener el UFO asignado de una CreditCardNumber dada
      * @param creditCardNumber el numero de la creditcard
      * @return devuelve el ufo asignado o null si no lo tiene
      */
