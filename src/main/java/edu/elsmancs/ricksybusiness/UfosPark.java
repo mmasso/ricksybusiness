@@ -28,7 +28,7 @@ public class UfosPark implements GuestDispatcher{
     /**
      * Método usado para assignar a cada nuevo cliente, un UFO.
      * 
-     * @throws Exception Cuando la creditCard no cumple los requisitos, no hay UFOS libres o ya estaba asignada.
+     * Captura excepcion cuando la creditCard no cumple los requisitos, no hay UFOS libres o ya estaba asignada.
      * @param creditCard Tarjeta de credito identificativa de cada cliente.
      */
     public void dispatch(CreditCard creditCard) {
@@ -53,7 +53,7 @@ public class UfosPark implements GuestDispatcher{
     /**
      * Método requerido para controlar las excepciones que pueda lanzar el método dispatch
      * @param holds boolean para comprobar lanzar la excepción
-     * @throws Exception
+     * @throws Excepcion
      */
     private void require(Boolean holds) throws Exception {
         if (!holds) {
@@ -114,7 +114,7 @@ public class UfosPark implements GuestDispatcher{
     }
 
     /**
-     * @Override del metodo toString() para imprimir la flota de ufos completa.
+     * Override del metodo toString() para imprimir la flota de ufos completa.
      */
     @Override
     public String toString() {

@@ -22,7 +22,7 @@ public class CrystalExpender implements GuestDispatcher {
     /**
      * Método usado para assignar a cada nuevo cliente, un cristal.
      * 
-     * @throws Exception Cuando la creditCard no cumple los requisitos lanza exception
+     * captura exception cuando la creditCard no cumple los requisitos lanza exception
      * @param creditCard Tarjeta de credito identificativa de cada cliente.
      */
     public void dispatch(CreditCard creditCard) {
